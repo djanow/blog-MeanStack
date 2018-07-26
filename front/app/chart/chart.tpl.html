@@ -1,0 +1,60 @@
+<div ng-header state="$state"></div>
+
+<header style="height:230px" class="masthead text-white text-center">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-9 mx-auto">
+              <h1 class="mb-0">Auto-Evaluation</h1>
+            </div>
+          </div>
+        </div>
+      </header>
+<!-- Icons Grid -->
+<section ng-init="chart.init()" class="features-icons bg-light text-center">
+    <div class="container">
+        <div class="row">
+        <div class="col-sm-4">
+            
+            <select class="form-control" ng-change="chart.SelectChange('front')" name="fSelect" ng-model="chart.fSelect">
+                <option value="radar">Radar</option>
+                <option value="bar">Bar</option>
+                <option value="line">Line</option>
+                <option value="pie">Pie</option>
+                <option value="doughnut">Doughnut</option>
+                <option value="polarArea">Polar Area</option>
+                <option value="horizontalBar">Horizontal Bar</option>
+            </select>
+            <br>
+            <canvas id="frontChart" width="300" height="300"></canvas>
+        </div>
+        <div class="col-sm-4">
+                <select class="form-control" ng-change="chart.SelectChange('back')" name="bSelect" ng-model="chart.bSelect">
+                    <option value="radar">Radar</option>
+                    <option value="bar">Bar</option>
+                    <option value="line">Line</option>
+                    <option value="pie">Pie</option>
+                    <option value="doughnut">Doughnut</option>
+                    <option value="polarArea">Polar Area</option>
+                    <option value="horizontalBar">Horizontal Bar</option>
+                </select>
+                <br>
+            <canvas id="backChart" width="300" height="300"></canvas>
+        </div>
+        <div class="col-sm-4">
+                <select class="form-control" ng-change="chart.SelectChange('other')" name="oSelect" ng-model="chart.oSelect">
+                    <option value="radar">Radar</option>
+                    <option value="bar">Bar</option>
+                    <option value="line">Line</option>
+                    <option value="pie">Pie</option>
+                    <option value="doughnut">Doughnut</option>
+                    <option value="polarArea">Polar Area</option>
+                    <option value="horizontalBar">Horizontal Bar</option>
+                </select>
+                <br>
+            <canvas id="otherChart" width="300" height="300"></canvas>            
+        </div>
+    </div>
+</section>
+
+<div footer></div>

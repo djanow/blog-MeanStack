@@ -1,0 +1,234 @@
+<div ng-header state="$state"></div>
+  
+<!-- Masthead -->
+<header style="height:580px" class="masthead text-white text-center">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 mx-auto">
+        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+          <div class="features-icons-icon d-flex">
+            <a style="margin: auto;font-size:40px;text-decoration:none;" href="https://www.linkedin.com/in/jean-moreau-54bb8766/" target="_blank"><i style="color: white!important;" class="icon-social-linkedin m-auto text-primary"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-9 mx-auto">
+        <h1 class="mb-0">Jean Moreau</h1>
+        <h2 class="lead mb-5">Web Developper FullStack</h2>
+      </div>
+      <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+        <img style="width: 200px" class="img-fluid rounded-circle mb-3" src="img/profpic2.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Icons Grid -->
+<section class="features-icons bg-light text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4" style="cursor: pointer;" ng-click="$scope.rolling1=!$scope.rolling1">
+        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+          <div class="features-icons-icon d-flex">
+            <i class="icon-screen-desktop m-auto text-primary"></i>
+          </div>
+          <h3>Fully Responsive Development</h3>
+          <p class="lead mb-0">Using Bootstrap & Media Querys</p>
+          <div style="text-align:left;font-weight:300;" ng-show="$scope.rolling1" class="mb-3">
+            <ul>
+              <li>Bootstrap: <code>col-xx-x</code>, <code>ui-grid</code>, <code>ui-Modal</code></li>
+              <li>Media Querys: Desktop, Tablette et Mobile...</li>
+              <li>Responsive: Retina, Flex...</li>
+
+            </ul>
+          </div>
+          <br>
+
+          <div ng-hide="$scope.rolling1" class="features-icons-icon d-flex">
+            <i class="icon-arrow-down m-auto text-primary"></i>
+          </div>
+          <div ng-show="$scope.rolling1" class="features-icons-icon d-flex">
+            <i class="icon-arrow-up m-auto text-primary"></i>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-lg-4" style="cursor: pointer;" ng-click="$scope.rolling2=!$scope.rolling2">
+        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+          <div class="features-icons-icon d-flex">
+            <i class="icon-layers m-auto text-primary"></i>
+          </div>
+          <h3>FullStack MeanStack Development</h3>
+          <p class="lead mb-0">Using MeanStacks and some usefull Framework</p>
+          <div style="text-align:left;font-weight:300;" ng-show="$scope.rolling2" class="mt-3">
+              <ul>
+                <li><b>M</b>ongo: MongoDB + Compass ...</li>
+                <li><b>E</b>xpress: ExpressJS + node-restful + Strongloop ...</li>
+                <li><b>A</b>ngularJS: AngularJS + Angular-Materials + Bootstap + ChartJS + jQuery ...</li>
+                <li><b>N</b>ode: Node + socket.IO + bower + gulp ...</li>
+                <li>Design Patern: Modular + MVC + single page</li>
+
+              </ul>
+            </div>
+
+            <div ng-hide="$scope.rolling2" class="features-icons-icon d-flex">
+              <i class="icon-arrow-down m-auto text-primary"></i>
+            </div>
+            <div ng-show="$scope.rolling2" class="features-icons-icon d-flex">
+              <i class="icon-arrow-up m-auto text-primary"></i>
+            </div>
+        </div>
+      </div>
+      <div class="col-lg-4" style="cursor: pointer;" ng-click="$scope.rolling3=!$scope.rolling3">
+        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+          <div class="features-icons-icon d-flex">
+            <i class="icon-check m-auto text-primary"></i>
+          </div>
+          <h3>Deployement and Management</h3>
+          <p class="lead mb-0">Deployement, Management process and other stuff </p>
+          <div style="text-align:left;font-weight:300;" ng-show="$scope.rolling3" class="mt-3">
+              <ul>
+                <li>Docker: <code>docker</code>, <code>docker-compose</code> and <code>dockerfiles</code></li>
+                <li>Management: Scrum, Environement Variable, Git</li>
+                <li>Framework: Ionic, Cordova</li>
+                <li>Logiciels: Unity3D, Visual Code</li>
+              </ul>
+            </div>
+
+            <div ng-hide="$scope.rolling3" class="features-icons-icon d-flex">
+              <i class="icon-arrow-down m-auto text-primary"></i>
+            </div>
+            <div ng-show="$scope.rolling3" class="features-icons-icon d-flex">
+              <i class="icon-arrow-up m-auto text-primary"></i>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Image Showcases -->
+<section class="showcase">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+
+      <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg');"></div>
+      <div class="col-lg-6 order-lg-1 my-auto showcase-text pr-3">
+        <h2>Fully Responsive Design for Web</h2>
+        <p class="lead mb-0">I always use best technology like bootstrap great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+      </div>
+    </div>
+    <div class="row no-gutters">
+      <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
+      <div class="col-lg-6 my-auto showcase-text pl-3">
+        <h2>Application</h2>
+        <p class="lead mb-0">Technology that i use is fully compatible with Cordova so i can convert my when website in Application MultiPlatform</p>
+      </div>
+    </div>
+    <div class="row no-gutters">
+      <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');background-position-x:-250px;"></div>
+      <div class="col-lg-6 order-lg-1 my-auto showcase-text pr-3">
+        <h2>Performances</h2>
+        <p class="lead mb-0">Beside using performing Stack of technology (use by google, tweeter...), i use framework like gulp (minimified) and single page to increase performances  </p>
+        <br>
+        <p class="lead mb-0">Technology Stacks:
+          <ul style="font-weight: 300">
+            <br>
+            <li>Back-End:<ul>
+                          <li>Mongoose</li>
+                          <li>Express</li>
+                          <li>Node</li>
+                          <li>StrongLoop</li>
+                          <li>Socket.IO</li>
+                          <li>Node-Restful</li>
+                        </ul>
+            </li>
+            <br>
+            <li>Front-End:<ul>
+                          <li>AngularJS</li>
+                          <li>ChartJS</li>
+                          <li>Bootstrap</li>
+                          <li>gulp</li>
+                          <li>Ionic</li>
+                          <li>Jquery</li>
+                          <li>Angular-Material</li>
+                        </ul>
+            </li>
+            <br>
+            <li>Management:
+                        <ul>
+                          <li>Scrum</li>
+                          <li>Git</li>
+                          <li>SSH</li>
+                          <li>Docker</li>
+                          <li>Modular Architectur</li>
+                          <li>MVC</li>
+                        </ul>
+            </li>
+          </ul>
+          <button ui-sref="root.chart" class="btn btn-block btn-lg btn-primary">See Auto-Evaluation on Chart</button>
+
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials text-center bg-light">
+  <div class="container">
+    <h2 class="mb-5">Passions...</h2>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+          <img style="height: 163px" class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
+          <h5>Robotics</h5>
+          <p class="font-weight-light mb-0">Make Machine with MicroController</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+          <img style="height: 163px" class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
+          <h5>Games</h5>
+          <p class="font-weight-light mb-0">Play and Make Games for Mobile</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+          <img style="height: 163px" class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
+          <h5>Movies</h5>
+          <p class="font-weight-light mb-0">Look Movies and TV Shows</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="call-to-action text-white text-center">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 mx-auto">
+        <h2 class="mb-4">Contact Me</h2>
+      </div>
+      <div class="col-md-10 mx-auto">
+        <form name="contactForm">
+          <div class="form-row">
+            <div class="col-6 col-md-6 mb-2 mb-md-0">
+              <input ng-model="home.form.email" type="email" class="form-control form-control-lg" placeholder="Enter your email*" required><br>
+              <input ng-model="home.form.name" type="text" class="form-control form-control-lg" placeholder="Enter your name*" required><br>
+              <input ng-model="home.form.compagny" type="text" class="form-control form-control-lg" placeholder="Enter your Compagny*" required><br>
+              <input ng-model="home.form.phone" type="tel" class="form-control form-control-lg" placeholder="Enter your Phone"><br>
+            </div>
+            <div class="col-6 col-md-6">
+              <textarea style="height:264px" ng-model="home.form.content" type="text" class="form-control form-control-lg" placeholder="Your Text Here*" required></textarea><br>
+              <button type="submit" ng-disabled="contactForm.$invalid" ng-click="home.send()" class="btn btn-block btn-lg btn-primary">Send</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<div footer></div>
