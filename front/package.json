@@ -1,0 +1,11 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "description": "###A starting point for being up and running in minutes with angularJS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm install -g http-server && http-server -c-1"
+  },
+  "author": "djanox",
+  "license": "ISC"
+}
