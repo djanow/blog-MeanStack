@@ -1,0 +1,28 @@
+{
+  "name": "blog-fullstack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./back-end/app.js",
+  "scripts": {
+    "test": "cd back-end && npm start && cd .. && cd front && npm install -g http-server && http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djanow/blog-MeanStack.git"
+  },
+  "keywords": [
+    "blog",
+    "meanstack",
+    "fullstack",
+    "passportjs",
+    "jtw",
+    "tinymce",
+    "chartjs"
+  ],
+  "author": "djanow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djanow/blog-MeanStack/issues"
+  },
+  "homepage": "https://github.com/djanow/blog-MeanStack#readme"
+}
