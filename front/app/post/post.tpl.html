@@ -1,0 +1,27 @@
+<div ng-header state="$state"></div>
+  
+      
+
+
+<!-- Image Showcases -->
+<section class="showcase" ng-init="init()">
+
+    
+    <div class="card card-custom-wide">
+        <div class="card-custom-wide-img" style="background-image: url(http://res.cloudinary.com/d3/image/upload/c_scale,q_auto:good,w_1110/trianglify-v1-cs85g_cc5d2i.jpg);"></div>
+        <div class="card-custom-avatar">
+          <img class="img-fluid" src="{{user.profilepic}}" alt="Avatar" />
+        </div>
+        <div class="card-body">
+            <img style="margin-left: 40%;" align="center" src="{{post.data.img}}">
+            <h4 class="card-title">{{post.data.subject}}</h4>
+            <p class="card-text">Author: {{user.username}}</p>
+            <p class="card-text">Creation: {{post.data.date | dateFilter}}</p>
+            <ng-bind-html ng-bind-html="trustAsHtml(post.data.content)">...</ng-bind-html>
+        </div>
+    </div>
+
+</section>
+
+
+<div footer></div>

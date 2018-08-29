@@ -23,6 +23,10 @@ inspired by http://www.befundoo.com/university/tutorials/angularjs-directives-tu
                 </li>
                 <li class="list-inline-item">&sdot;</li>
                 <li class="list-inline-item">
+                  <a ui-sref="root.chart">Chart</a>
+                </li>
+                <li class="list-inline-item">&sdot;</li>
+                <li class="list-inline-item">
                   <a ui-sref="root.privacypolicy">Privacy Policy</a>
                 </li>
               </ul>

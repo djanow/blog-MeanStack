@@ -23,15 +23,20 @@
 
           setAsLoading(true);
           setAsAvailable(false);
-
+          var tmp = JSON.parse(apiUrl);
+          tmp.forEach(function(elem) {
+            
           //in real world you should call server here
-          if (value === 'admin@example.com') {
+          if (value === elem) {
             setAsLoading(false);
             setAsAvailable(false);
           } else {
             setAsLoading(false);
             setAsAvailable(true);
+
+            return value;
           }
+          });
 
           return value;
         });

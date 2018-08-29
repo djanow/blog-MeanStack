@@ -16,10 +16,23 @@
         <li class="nav-item">
           <a ui-sref-active="active" class="nav-link" ui-sref="root.chart">Chart</a>
         </li>
+        <li class="nav-item">
+          <a ui-sref-active="active" class="nav-link" ui-sref="root.posts">Posts</a>
+        </li>
+        <li ng-hide="islogin.value" class="nav-item">
+          <a ui-sref-active="active" class="nav-link" ui-sref="root.signin">SignIn</a>
+        </li>
+        <li ng-show="islogin.value" class="nav-item">
+          <a ui-sref-active="active" class="nav-link" ui-sref="root.cpost">Create Post</a>
+        </li>
       </ul>
-      <form ng-hide="true" class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <form ng-hide="islogin.value" class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="email" placeholder="email" aria-label="email" ng-model="username">
+        <input class="form-control mr-sm-2" type="password" placeholder="password" aria-label="password" ng-model="password">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" ng-click="login()">Login</button>
+      </form>
+      <form ng-show="islogin.value" class="form-inline my-2 my-lg-0">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" ng-click="logout()">Logout</button>
       </form>
     </div>
   </nav>

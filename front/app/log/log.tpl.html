@@ -1,0 +1,67 @@
+<div ng-header state="$state"></div>
+
+<section class="post">
+  <!-- Image Showcases -->
+<section class="showcase">
+    <div class="container-fluid p-0">
+      <div class="row no-gutters">
+        <div class="col-lg-8 my-auto showcase-text pr-3">
+          <form class="pure-form pure-form-stacked" name="form" novalidate ng-submit="log.submit()">
+            <fieldset>
+              <label for="email">Email</label>
+              <input id="email" unique-email-validator="{{log.data.users}}" name="email" type="email" ng-model="log.data.email" placeholder="Email" required>
+              <div ng-messages="!form.email.$pristine && form.email.$error" class="error">
+                <div ng-message="required">
+                  You forgot to enter your email address...
+                </div>
+                <div ng-message="email">
+                  You did not enter your email address correctly...
+                </div>
+                <div ng-message="recordLoading">Checking database...</div>
+                <div ng-message="recordAvailable">The email address is already in use...</div>
+              </div>
+              <label for="password">Password</label>
+              <input id="password" name="password" ng-minlength=5 type="password" ng-model="log.data.password" placeholder="Password" required>
+              <div ng-messages="!form.password.$pristine && form.password.$error" class="error">
+                <div ng-message="required">
+                  You forgot to enter your password...
+                </div>
+                <div ng-message="minlength">
+                  Your password should be at least 5 characters long...
+                </div>
+              </div>
+              <label for="remember" class="pure-checkbox">
+                <input id="remember" type="checkbox" ng-model="log.data.remember"> Remember me
+              </label>
+    
+              <button ng-disabled="form.$invalid" type="submit" class="pure-button pure-button-primary">Sign in</button>
+            </fieldset>
+          </form>
+        </div>
+        
+        <div class="col-lg-4 ">
+        
+          <div>Profile Pic</div>
+          <div>Crop Image and Upload</div>
+          <a  class="btn btn-primary" ngf-select ng-model="picFile" accept="image/*">
+              Select Picture</a>
+          <br>
+          <br>
+          <div ngf-drop ng-model="picFile" ngf-pattern="image/*"
+              class="cropArea">
+              <img-crop  area-type="circle" image="picFile  | ngfDataUrl"                 
+              result-image="croppedDataUrl" ng-init="croppedDataUrl=''">
+              </img-crop>
+          </div>
+          <br>
+          <div>
+              <img ng-src="{{croppedDataUrl}}" />
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<div footer></div>

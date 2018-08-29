@@ -20,11 +20,14 @@
   angular.module('app', [
       'ngMessages',
       'ui.router',
+      'ui.bootstrap',
+      
       'home',
       'miscellanoeous',
       'header',
       'services.data',
       'services.utils',
+      'services.modal',
       'services.enventBus',
       'interceptors.http',
       'directives.version',
@@ -33,9 +36,18 @@
       'directives.rating',
       'directives.footer',
       'filters.uppercase',
+      'filters.dateFilter',
       'cv',
       'privacypolicy',
-      'chart'
+      'posts',
+      'post',
+      'log',
+      'cPost',
+      'chart',
+      'ngFileUpload', 
+      'ngImgCrop',
+      'ui.tinymce'
+      
     ])
     .config(config)
     .run(run)

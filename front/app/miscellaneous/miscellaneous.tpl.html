@@ -7,7 +7,8 @@
         <div>
           <form class="pure-form pure-form-stacked" name="form" novalidate ng-submit="miscellaneous.submit()">
             <fieldset>
-              <legend>A Form</legend>
+              <legend>
+                  {{miscellaneous.data.islog.user.username}}</legend>
               <label for="email">Email (try to fill with 'admin@example.com' to see the custom validator in action)</label>
               <input id="email" unique-email-validator="emails.json" name="email" type="email" ng-model="miscellaneous.data.email" placeholder="Email" required>
               <div ng-messages="!form.email.$pristine && form.email.$error" class="error">

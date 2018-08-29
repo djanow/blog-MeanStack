@@ -1,0 +1,20 @@
+<div ng-header state="$state"></div>
+  
+<section>  
+    <div style="display: flex;flex-flow: wrap;">  
+        <div ng-repeat="p in posts.data" class="card card-custom bg-white border-white">
+            <div class="card-custom-img" style="background-image: url({{p.img}});"></div>
+            <div class="card-custom-avatar">
+                <img class="img-fluid" src="{{p.profilepic}}" alt="Avatar" />
+            </div>
+            <div class="card-body" style="overflow-y: auto">
+                <h4 class="card-title">{{p.subject}}</h4>
+                <p class="card-text" style="overflow-y: auto">{{p.description}}</p>
+            </div>
+            <div class="card-footer" style="background: inherit; border-color: inherit;">
+                <a href="#/post/{{p._id}}" class="btn btn-primary">ICI</a>
+            </div>
+        </div>
+    </div>
+</section>
+<div footer></div>

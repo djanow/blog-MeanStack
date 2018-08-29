@@ -24,7 +24,7 @@
       });
   }
 
-  function miscellaneousCtrl($log, $scope, DataService, EventBus) {
+  function miscellaneousCtrl($log, $scope,$rootScope, DataService, EventBus) {
     /*jshint validthis:true */
     var miscellaneous = this;
     miscellaneous.data = {};
@@ -32,6 +32,10 @@
 
     miscellaneous.data.rating = 7;
     miscellaneous.data.rating1 = 4;
+
+    $scope.$on('islogin', function(event, msg) {
+      miscellaneous.data.islog = msg;
+    });
 
     miscellaneous.doSomethingWithRating = function(rating) {
       $log.debug('Rating selected - ' + rating);

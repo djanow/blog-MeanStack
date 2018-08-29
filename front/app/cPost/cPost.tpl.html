@@ -1,0 +1,71 @@
+<div ng-header state="$state"></div>
+  
+
+<section class="post">
+    <!-- Image Showcases -->
+  <section class="showcase">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+          <div class="col-lg-8  my-auto showcase-text pr-3">
+              <form class="pure-form pure-form-stacked" name="form" novalidate >
+                <fieldset>
+
+                    <label>Subject:</label>
+                    <input style="width: 100%" id="Subject" name="Subject" type="text" ng-model="cPost.data.subject" placeholder="Subject" required>
+                    <div ng-messages="!form.subject.$pristine && form.subject.$error" class="error">
+                      <div ng-message="required">
+                        You forgot to enter your subject...
+                      </div>
+                    </div>
+                    <br>
+                    <label>Description:</label>
+                    <input style="width: 100%" id="Description" name="Description" type="text" ng-model="cPost.data.description" placeholder="Description" required>
+                    <div ng-messages="!form.subject.$pristine && form.subject.$error" class="error">
+                      <div ng-message="required">
+                        You forgot to enter your Description...
+                      </div>
+                    </div>
+                    <br><br>
+
+                  <textarea  ui-tinymce="tinymceOptions"  id="content" name="content" type="text" ng-model="cPost.data.content" placeholder="content" required></textarea>
+                  
+                </fieldset>
+              </form>
+          </div>
+          <div class="col-lg-4 text-white showcase-img">
+            <form class="pure-form pure-form-stacked" name="form" novalidate >
+              <fieldset>
+                
+                <br><br><br><br><br>
+
+                <div>Crop Image and Upload</div>
+                <a  class="btn btn-primary" ngf-select ng-model="picFile" accept="image/*">
+                    Select Picture</a>
+                <br>
+                <br>
+                <div ngf-drop ng-model="picFile" ngf-pattern="image/*"
+                    class="cropArea">
+                    <img-crop  area-type="square" image="picFile  | ngfDataUrl"                 
+                    result-image="croppedDataUrl" ng-init="croppedDataUrl=''">
+                    </img-crop>
+                </div>
+                <br>
+                <div>
+                    <img ng-src="{{croppedDataUrl}}" />
+                </div>
+                <br><br><br><br><br><br><br>
+                <button ng-disabled="form.$invalid"  type="submit" class="pure-button pure-button-primary" ng-click="cPost.submit()">Submit</button> 
+                    
+                <span class="progress" ng-show="progress >= 0">
+                  <div style="width:{{progress}}%" ng-bind="progress + '%'"></div>
+                </span>
+                <span ng-show="result">Upload Successful</span>
+                <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<div footer></div>

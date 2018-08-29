@@ -24,10 +24,10 @@
                 return DataService.get('data.json');
               }
               sendMessage: function(data){
-                return DataService.post('http://localhost:3000/messages',data);
+                return DataService.post('http://localhost:3000/api/message',data);
               },
               getMessage: function(DataService){
-                return DataService.get('http://localhost:3000/messages');
+                return DataService.get('http://localhost:3000/api/message');
               }*/
             }
           }
@@ -47,7 +47,7 @@
       home.form.subject = 'Candidature';
       if(typeof home.form.phone == 'undefined')
         home.form.phone = 0;
-      result = DataService.post('http://localhost:3000/messages',home.form);
+      result = DataService.post('http://localhost:3000/api/message',home.form);
       result.then(function(tmp) { 
         if(tmp.status<210 && tmp.status>=200){
           home.form={};
@@ -56,7 +56,6 @@
           alert("error status: "+result.status);
         }
       });
-      console.log(result);
       home.form={};
       alert("Message Send");
     }
